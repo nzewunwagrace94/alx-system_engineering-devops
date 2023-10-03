@@ -1,2 +1,2 @@
 #!/bin/bash
-grep < "[A c]" "[z e]"
+tr "A c" "Z e"
