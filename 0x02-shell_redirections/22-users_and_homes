@@ -1,2 +1,2 @@
 #!/bin/bash
-grep sort . .. /etc/passwd | uniq
+tr -F: "$1 $6" /etc/passwd | sort
