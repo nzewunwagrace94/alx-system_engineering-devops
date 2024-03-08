@@ -1,3 +1,4 @@
-eturns its own process ID
+#!/usr/bin/env bash
+# Returns its own process ID
 
 echo $$
