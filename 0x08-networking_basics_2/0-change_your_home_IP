@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A script to change localhost addresse
+sudo sed -i 's/^127.0.0.1[[:space:]]localhost$/127.0.0.2 localhost/' /etc/hosts
+sudo sed -i 's/^0.0.0.0[[:space:]]facebook.com$/8.8.8.8 facebook.com/' /etc/hostss
