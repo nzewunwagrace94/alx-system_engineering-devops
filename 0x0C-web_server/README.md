@@ -1,37 +1,69 @@
-# 0x0C. Web server
+0x0C. Web server
+DevOps
+SysAdmin
 
-<p align="center">
-  <img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/266/8Gu52Qv.png" />
-</p>
+Background Context
+https://www.youtube.com/watch?v=AZg4uJkEa-4&feature=youtu.be&hd=1
 
-## Description
-This project will teach you how to automate the configuration of a web server. We are provided a server for this project that we must configure on our own and that we will reuse for other projects at ALX SE.
+In this project, some of the tasks will be graded on 2 aspects:
 
-## Resource
+Is your web-01 server configured according to requirements
+Does your answer file contain a Bash script that automatically performs commands to configure an Ubuntu machine to fit requirements (meaning without any human intervention)
+For example, if I need to create a file /tmp/test containing the string hello world and modify the configuration of Nginx to listen on port 8080 instead of 80, I can use emacs on my server to create the file and to modify the Nginx configuration file /etc/nginx/sites-enabled/default.
 
-<details>
-<summary><a href="https://www.gnu.org/software/libc/manual/html_node/Processes.html#Processes">Child Process</a></summary><br>
-<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/bw6hYBS5/image.png' border='0' alt='image'/></a>
-</details>
+But my answer file would contain:
 
-- [Background contenxt](https://www.youtube.com/watch?v=AZg4uJkEa-4)
-- [How the web works](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Nginx](https://en.wikipedia.org/wiki/Nginx)
-- [How to Configure Nginx](https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-server-blocks-virtual-hosts-on-ubuntu-16-04)
-- [Root and sub domain](https://landingi.com/help/domains-vs-subdomains/)
-- [HTTP requests](https://www.tutorialspoint.com/http/http_methods.htm)
-- [HTTP redirection](https://moz.com/learn/seo/redirection)
-- [Not found HTTP response code](https://en.wikipedia.org/wiki/HTTP_404)
-- [Logs files on Linux](https://www.cyberciti.biz/faq/ubuntu-linux-gnome-system-log-viewer/)
-- [RFC 7231 (HTTP/1.1)](https://datatracker.ietf.org/doc/html/rfc7231)
-- [RFC 7540 (HTTP/2)](https://datatracker.ietf.org/doc/html/rfc7540)
+sylvain@ubuntu cat 88-script_example
+#!/usr/bin/env bash
+# Configuring a server with specification XYZ
+echo hello world > /tmp/test
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sylvain@ubuntu
+As you can tell, I am not using emacs to perform the task in my answer file. This exercise is aiming at training you on automating your work. If you can automate tasks that you do manually, you can then automate yourself out of repetitive tasks and focus your energy on something more interesting. For an SRE, that comes very handy when there are hundreds or thousands of servers to manage, the work cannot be only done manually. Note that the checker will execute your script as the root user, you do not need to use the sudo command.
 
-## Table of contents
-Files | Description
------ | -----------
-[0-transfer_file](./0-transfer_file) | Bash script that transfers a file from a client to a server
-[1-install_nginx_web_server](./1-install_nginx_web_server) | Bash script that installs Nginx on a web server
-[2-setup_a_domain_name](./2-setup_a_domain_name) | Domain name gotten from .TECH Domains
-[3-redirection](./3-redirection) | Bash script that configures an Nginx server so that /redirect_me is redirecting to another page
-[4-not_found_page_404](./4-not_found_page_404) | Bash script that configures a Nginx server to have a custom 404 page that contains the string 'Ceci n'est pas une page'
-[7-puppet_install_nginx_web_server.pp](./7-puppet_install_nginx_web_server.pp) | Time to practice configuring your server with Puppet! Just as you did before, we’d like you to install and configure an Nginx server using Puppet instead of Bash. To save time and effort, you should also include resources in your manifest to perform a 301 redirect when querying /redirect_me.
+Resources
+Read or watch:
+
+How the web works
+Nginx
+How to Configure Nginx
+Child process concept page
+Root and sub domain
+HTTP requests
+HTTP redirection
+Not found HTTP response code
+Logs files on Linux
+For reference:
+
+RFC 7231 (HTTP/1.1)
+RFC 7540 (HTTP/2)
+man or help:
+
+scp
+curl
+
+General
+What is the main role of a web server
+What is a child process
+Why web servers usually have a parent process and child processes
+What are the main HTTP requests
+DNS
+What DNS stands for
+What is DNS main role
+DNS Record Types
+A
+CNAME
+TXT
+MX
+
+Requirements
+General
+Allowed editors: vi, vim, emacs
+All your files will be interpreted on Ubuntu 16.04 LTS
+All your files should end with a new line
+A README.md file, at the root of the folder of the project, is mandatory
+All your Bash script files must be executable
+Your Bash script must pass Shellcheck (version 0.3.7) without any error
+The first line of all your Bash scripts should be exactly #!/usr/bin/env bash
+The second line of all your Bash scripts should be a comment explaining what is the script doing
+You can’t use systemctl for restarting a process
