@@ -24,15 +24,16 @@ As you can tell, I am not using emacs to perform the task in my answer file. Thi
 Resources
 Read or watch:
 
-How the web works
-Nginx
-How to Configure Nginx
-Child process concept page
-Root and sub domain
-HTTP requests
-HTTP redirection
-Not found HTTP response code
-Logs files on Linux
+How the web works https://intranet.alxswe.com/rltoken/6TI3HiyFdwrbXWKVF24Gxw
+Nginx https://intranet.alxswe.com/rltoken/vkVMGlaf39j2DWAQWzo6EA
+How to Configure Nginx https://intranet.alxswe.com/rltoken/zKrpVxWuUHVdW4URAjdFbw
+Child process concept page https://intranet.alxswe.com/rltoken/Ar18u5sRis1fkvkVgzdcqg
+Root and sub domain https://intranet.alxswe.com/rltoken/Ar18u5sRis1fkvkVgzdcqg
+HTTP requests https://intranet.alxswe.com/rltoken/sBrrP4EAmI3NoYjIgZrUhw
+HTTP redirection https://intranet.alxswe.com/rltoken/Eaa4ZuKvye941hTkP8VlBQ
+Not found HTTP response code https://intranet.alxswe.com/rltoken/eJSp2QFTY6jqqNtz8OVDEw
+Logs files on Linux https://intranet.alxswe.com/rltoken/7WMNY5CWD-CBrxmQrdmfPg
+
 For reference:
 
 RFC 7231 (HTTP/1.1)
@@ -43,6 +44,7 @@ scp
 curl
 
 General
+
 What is the main role of a web server
 What is a child process
 Why web servers usually have a parent process and child processes
@@ -57,7 +59,9 @@ TXT
 MX
 
 Requirements
+
 General
+
 Allowed editors: vi, vim, emacs
 All your files will be interpreted on Ubuntu 16.04 LTS
 All your files should end with a new line
