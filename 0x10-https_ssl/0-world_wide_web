@@ -1,18 +1,43 @@
 #!/usr/bin/env bash
-# Script that will display information about subdomains
 
-DNS_info () {
-    ANSWER=$(dig $2 | grep -A1 'ANSWER SECTION:' | awk 'NR==2 {print $0}')
-    echo "The subdomain $1 is a $(echo $ANSWER | awk '{print $4}') record and points to $(echo $ANSWER | awk '{print $5}')"
+# Function to display DNS information for a subdomain
+get_dns_info() {
+    local domain="$1"
+    local subdomain="$2"
+
+    # Use dig to get DNS information for the subdomain
+    dns_info=$(dig +short "$subdomain.$domain")
+
+    # Extract the record type and destination IP address from the DNS information
+    record_type=$(echo "$dns_info" | awk '{print $4}')
+    destination=$(echo "$dns_info" | awk '{print $1}')
+
+    # Display the information
+    echo "The subdomain $subdomain is a A$record_type record and points to $destination"
 }
 
-if [[ $# == 1 ]]; then
-    subdomains=('www' 'lb-01' 'web-01' 'web-02')
-    for i in "${subdomains[@]}"; do
-	CONCAT="$i.$1"
-	DNS_info $i $CONCAT
-    done
-else
-    CONCAT="$2.$1"
-    DNS_info $2 $CONCAT
+# Main function
+main() {
+    local domain="$1"
+    local subdomain="$2"
+
+    # If subdomain is not provided, query information for default subdomains
+    if [ -z "$subdomain" ]; then
+        get_dns_info "$domain" "www"
+        get_dns_info "$domain" "lb-01"
+        get_dns_info "$domain" "web-01"
+        get_dns_info "$domain" "web-02"
+    else
+        # Query information for the specified subdomain
+        get_dns_info "$domain" "$subdomain"
+    fi
+}
+
+# Check if domain and subdomain parameters are provided
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <domain> [subdomain]"
+    exit 1
 fi
+
+# Call the main function with provided arguments
+main "$@"
