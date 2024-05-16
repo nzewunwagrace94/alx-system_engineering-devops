@@ -8,7 +8,7 @@ SysAdmin
 Scripting
 Debugging
 
-Web stack debugging
+Web stack debugging (https://intranet.alxswe.com/concepts/68)
 
 
 Requirements
