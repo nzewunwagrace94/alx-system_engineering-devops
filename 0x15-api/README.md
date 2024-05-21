@@ -1,20 +1,18 @@
-
 Curriculum
 SE Foundations
-Average: 100.58%
 0x15. API
 Python
 Scripting
 Back-end
 API
- Weight: 1
- Project will start May 20, 2024 6:00 AM, must end by May 21, 2024 6:00 AM
- Checker was released at May 20, 2024 12:00 PM
- An auto review will be launched at the deadline
+
 Concepts
+
 For this project, we expect you to look at this concept:
 
-Portfolio Project Deeper Overview
+Portfolio Project Deeper Overview [https://intranet.alxswe.com/concepts/102042]
+
+
 Background Context
 
 
@@ -27,16 +25,27 @@ This is a perfect example of a task that is not suited for Bash scripting, so le
 Resources
 Read or watch:
 
-Friends don’t let friends program in shell script
-What is an API
-What is an API? In English, please
-What is a REST API
-What are microservices
-PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry
+
+Friends don’t let friends program in shell script [https://intranet.alxswe.com/rltoken/KMFzqRAqedMf7AHHBD_43g]
+
+What is an API [https://intranet.alxswe.com/rltoken/zeBO6_RNTlwaotyRRNAzoQ]
+
+What is an API? In English, please [https://intranet.alxswe.com/rltoken/bf09Qp6QY44CANLzxxRbPAhttps://intranet.alxswe.com/rltoken/bf09Qp6QY44CANLzxxRbPA]
+
+What is a REST API [https://intranet.alxswe.com/rltoken/fA164QWEnZxaSngBD3EPRQ]
+
+What are microservices [https://intranet.alxswe.com/rltoken/n4h77IbBuDxTE3bhes_AyQ]
+
+PEP8 Python style - having a clean code respecting style guide is really appreciated in the industry [https://intranet.alxswe.com/rltoken/b7V1ROY6kSRxDDKnsJoqxg]
+
+
 Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+At the end of this project, you are expected to be able to explain to anyone [https://intranet.alxswe.com/rltoken/03Evn5VsICwJUAiTdu0zHA], without the help of Google:
+
 
 General
+
 What Bash scripting should not be used for
 What is an API
 What is a REST API
@@ -49,13 +58,12 @@ Pythonic Variable name style
 Pythonic Function name style
 Pythonic Constant name style
 Significance of CapWords or CamelCase in Python
-Copyright - Plagiarism
-You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
-You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
-You are not allowed to publish any content of this project.
-Any form of plagiarism is strictly forbidden and will result in removal from the program.
+
+
 Requirements
+
 General
+
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
 All your files should end with a new line
@@ -68,10 +76,13 @@ The length of your files will be tested using wc
 All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
 You must use get to access to dictionary value by key (it won’t throw an exception if the key doesn’t exist in the dictionary)
 Your code should not be executed when imported (by using if __name__ == "__main__":)
+
+
 Tasks
+
 0. Gather data from an API
 mandatory
-Write a Python script that, using this REST API, for a given employee ID, returns information about his/her TODO list progress.
+Write a Python script that, using this REST API [https://intranet.alxswe.com/rltoken/7cr7aLYdaWAZWBKrBKS12A], for a given employee ID, returns information about his/her TODO list progress.
 
 Requirements:
 
