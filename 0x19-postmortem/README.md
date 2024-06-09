@@ -1,5 +1,5 @@
 # 0x19. Postmortem - Practice Exercise
-
+Task 0.
 ## Issue Summary
 Between 00:00 and 00:37 (10-06-2023, 12:11 am - 12:48 am GMT-1), all servers began returning a 500 error on all requests due to a recent server configuration update. The issue was caused by a mistyped reference in the WordPress settings file. The website was inaccessible to all users during the update.
 
@@ -25,3 +25,7 @@ Between 00:00 and 00:37 (10-06-2023, 12:11 am - 12:48 am GMT-1), all servers beg
 
 ## Corrective/Preventative measures
 To prevent similar issues in the future, it is recommended to implement unit testing or pre-testing of code before pushing it to production. Alternatively, commit small changes in a way that allows change history to be easily reviewed on GitHub. This can help identify issues and prevent widespread downtime.
+
+Task 1
+
+https://twitter.com/devopsreact/status/834887829486399488
