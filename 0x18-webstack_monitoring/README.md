@@ -6,7 +6,6 @@ Average: 101.43%
 DevOps
 SysAdmin
 monitoring
- Weight: 1
 Concepts
 For this project, we expect you to look at these concepts:
 
@@ -92,8 +91,7 @@ GitHub repository: alx-system_engineering-devops
 Directory: 0x18-webstack_monitoring
     
 2. Create a dashboard
-mandatory
-Score: 0.0% (Checks completed: 0.0%)
+
 Now create a dashboard with different metrics displayed in order to get a few different visualizations.
 
 Create a new dashboard
