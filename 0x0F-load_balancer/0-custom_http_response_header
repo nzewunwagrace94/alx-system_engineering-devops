@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # duplicate web-01 to web-02
+# these scripts are an upgrade from the web-server scripts...
 
 # uncomment to see the script run in action
 #set -x
@@ -27,7 +28,7 @@ echo -e "\nSetting up some minor stuff.\n"
 # allowing nginx on firewall
 sudo ufw allow 'Nginx HTTP'
 
-# Give the user ownership to website files for easier editing
+# Give the user ownership to website files for easy editing
 if [ -d "/var/www" ]; then
 	sudo chown -R "$USER":"$USER" /var/www
 	sudo chmod -R 755 /var/www
@@ -37,20 +38,20 @@ else
 	sudo chmod -R 755 /var/www
 fi
 
-# create directories if are not present
+# create directories if not present
 for dir in /var/www/{html,error}; do
 	if ! [ -d "$dir" ]; then
 		mkdir -p "$dir"
 	fi
 done
 
-# creating new index page
+# creating new index
 echo "Hello World!" > /var/www/html/index.html
 
-# create new not found page
+# create new error page
 echo "Ceci n'est pas une page" > /var/www/html/error_404.html
 
-# backup default server file
+# backup default server config file
 sudo cp /etc/nginx/sites-enabled/default nginx-sites-enabled_default.backup
 
 server_config=\
