@@ -22,7 +22,7 @@ install haproxy #install haproxy
 
 echo -e "\nSetting up some minor stuff.\n"
 
-# backup default server file
+# backup default server config file
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 server_config=\
@@ -40,8 +40,8 @@ frontend clickviral-tech-frontend
 
 backend clickviral-tech-backend
     balance roundrobin
-    server 151666-web-01 100.25.190.21:80 check
-    server 151666-web-02 54.160.77.90:80 check
+    server 151666-web-01 54.85.31.112:80 check
+    server 151666-web-02 54.173.67.127:80 check
 "
 
 # shellcheck disable=SC2154
@@ -57,3 +57,5 @@ if [ "$(pgrep -c haproxy)" -le 0 ]; then
 else
 	sudo service haproxy restart
 fi
+
+echo -e "web-01 web-02"
