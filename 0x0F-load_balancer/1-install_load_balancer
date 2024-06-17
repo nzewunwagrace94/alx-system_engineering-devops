@@ -34,11 +34,11 @@ defaults
   timeout server 15s
   timeout http-request 10s
 
-frontend haproxy-main
+frontend graceetech-tech-frontend
     bind *:80
-    default_backend clickviral-tech-backend
+    default_backend graceetech-tech-backend
 
-backend nginx_server
+backend graceetech-tech-backend
     balance roundrobin
     server 530603-web-01 54.85.31.112:80 check
     server 530603-web-02 54.173.67.127:80 check
