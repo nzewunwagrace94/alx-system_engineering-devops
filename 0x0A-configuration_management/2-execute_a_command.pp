@@ -1,6 +1,5 @@
-#Create a manifest that kills a process named killmenow
-exec { 'killmenow':
-  command  => '/usr/bin/pkill killmenow',
-  provider => 'shell',
-  returns  => [0, 1],
+# execute pkill command to kill bashscript file killmenow
+exec { 'pkill':
+  command => 'pkill -9 -f killmenow',
+  path    => ['/usr/bin', '/usr/sbin', '/bin']
 }
